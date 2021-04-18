@@ -31,7 +31,6 @@ class ArticleListViewController: UIViewController {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.delegate = self
-//        searchController.delegate = self
         navigationItem.searchController = searchController
     }
     
@@ -80,6 +79,7 @@ extension ArticleListViewController: UITableViewDelegate, UITableViewDataSource 
 }
 
 extension ArticleListViewController: UISearchResultsUpdating, UISearchBarDelegate, UISearchControllerDelegate{
+    
     // 検索バーの文字が変更されるたびに呼び出される
     func updateSearchResults(for searchController: UISearchController) {
         self.searchText = searchController.searchBar.text
